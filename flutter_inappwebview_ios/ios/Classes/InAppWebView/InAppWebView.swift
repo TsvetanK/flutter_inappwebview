@@ -524,6 +524,8 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
             configuration.preferences.javaScriptEnabled = settings.javaScriptEnabled
             if #available(iOS 14.0, *) {
                 configuration.defaultWebpagePreferences.allowsContentJavaScript = settings.javaScriptEnabled
+            } else {
+                configuration.preferences.javaScriptEnabled = true
             }
             
             if #available(iOS 15.0, *) {
